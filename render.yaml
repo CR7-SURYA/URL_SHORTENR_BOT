@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: url-shortener-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        # This prevents the value from being committed to your Git repo.
+        # You will set the actual token securely in the Render dashboard.
+        sync: false
