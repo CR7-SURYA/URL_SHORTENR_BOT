@@ -14,8 +14,8 @@ if not API_TOKEN:
 
 bot = telebot.TeleBot(API_TOKEN)
 
-# Initialize the URL shortener
-s = pyshorteners.Shorteners(timeout=10)
+# --- CORRECTED LINE BELOW ---
+s = pyshorteners.Shortener(timeout=10)
 
 # --- The "fake" Flask web server part ---
 app = Flask(__name__)
